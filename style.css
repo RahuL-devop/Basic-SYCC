@@ -1,0 +1,557 @@
+:root {
+  --font: 'Scto Grotesk A Bold';
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --backgound-color: #f3f3f3;
+  --footer-bg: #252422;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  cursor: none;
+}
+/* Common styles for overlay and video */
+#overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+#overlay video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+/* MouseFollower Animation */
+.mousefollower {
+  height: 25px;
+  width: 25px;
+  mix-blend-mode: difference;
+}
+/* Shared styles for page1 and its elements */
+#page1,
+#page1 nav {
+  height: 100%;
+  width: 100%;
+}
+#page1 {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: rgba(243, 243, 243, 0.8);
+}
+#page1 nav {
+  padding: 4vw 6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/* Common styles for navigation links */
+#page1 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 60%;
+  height: 1vw;
+}
+.nav h5 {
+  text-transform: uppercase;
+  font-size: 1.25vw;
+  cursor: pointer;
+  font-weight: 800;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.nav h5:after {
+  content: '';
+  display: inline-block;
+  height: 1vw;
+  width: 0%;
+  position: relative;
+  top: -13px;
+  border-bottom: 1px solid #dadada;
+  -webkit-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+.nav h5:hover:after {
+  width: 100%;
+}
+.nav h5:hover {
+  color: rgba(243, 243, 243);
+  -webkit-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+/* Styles for navigation span */
+#page1 nav .span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.5vw;
+  -webkit-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+/* Shared styles for page2 and its elements */
+#page2 {
+  height: 90vh;
+  width: 100%;
+}
+.page2-content {
+  height: 100%;
+  padding: 15vw;
+  width: 100%;
+}
+.page2-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+/* Common styles for figures within page2-content */
+.page2-content figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1vw;
+  height: 30vh;
+  width: 20vw;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.page2-content figure svg:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.page2-content figure figcaption {
+  margin-top: 5vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page2-content figure:hover figcaption {
+  text-decoration: underline;
+}
+/*Styles for SVGs within page2-content */
+.page2-content svg {
+  text-align: center;
+  height: 10vh;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+/* Shared styles for page3 and its elements */
+#page3 {
+  height: 70vh;
+  width: 100%;
+}
+.page3-content {
+  color: #252422;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 4vw;
+}
+.page3-line {
+  width: 90%;
+  margin-left: 5%;
+  height: 0.1rem;
+  background-color: currentColor;
+  margin-bottom: 5vw;
+}
+/* Styles for left content in page3 */
+.page3-left-content {
+  width: 40%;
+}
+.page3-left-content h4 {
+  font-size: 3vw;
+  letter-spacing: -1px;
+  line-height: 3.5vw;
+  font-weight: 400;
+}
+/* Styles for right content in page3 */
+.page3-right-content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.page3-right-content h1,
+.page3-right-content .symbol {
+  font-size: 18vw;
+}
+/* Styles for button in page3 */
+.page3-content button {
+  padding: 0.5vw 5vw;
+  margin-top: 5vw;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #252422;
+  border-radius: 25px;
+  font-weight: 900;
+  font-size: 1.2vw;
+  position: relative;
+  z-index: 1;
+}
+/* Shared styles for page4 and its elements */
+#page4 {
+  width: 100%;
+  min-height: 100vh;
+}
+.page4-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2vw;
+  gap: 2vw;
+}
+.top-left {
+  position: relative;
+}
+/* Styles for images and videos within page4-container */
+.page4-container img,
+.page4-container video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.page4-container img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.page4-text {
+  position: absolute;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 2vw;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 50%;
+  z-index: -1;
+}
+
+/* Styles for sections with specific classes */
+.top-left,
+.right-center,
+.bottom-right {
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+}
+/* Shared styles for page5 and its elements */
+#page5 {
+  min-height: 100vh;
+  width: 100%;
+}
+.page5-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5vw;
+}
+/* Styles for left and right sections */
+.left,
+.right {
+  width: 50%;
+}
+/* Styles for text content in the left section */
+.left .text h1 {
+  font-size: 7vw;
+  line-height: 6vw;
+  letter-spacing: -2px;
+}
+.left p {
+  font-size: 1.5vw;
+  margin-top: 2vw;
+  font-weight: 600;
+}
+.left button {
+  background: transparent;
+  outline: 0;
+  border: 1px solid #252422;
+  padding: 0.5vw 2.8vw;
+  border-radius: 25px;
+  margin-top: 2vw;
+  font-size: 1.3vw;
+  font-weight: 600;
+  position: relative;
+}
+/* Styles for container and its image */
+.container {
+  height: 90%;
+  width: 100%;
+}
+.container video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+/* Shared styles for page6 and its elements */
+#page6 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 5vw;
+}
+#page6 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+/* Shared styles for buttons within .flex */
+.flex button {
+  background: transparent;
+  outline: 0;
+  border: 1px solid #252422;
+  padding: 0.5vw 2.8vw;
+  border-radius: 25px;
+  margin-top: 2vw;
+  font-size: 1.3vw;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.line {
+  height: 0.1rem;
+  background-color: #252422;
+  margin: 3vw 0 0;
+}
+/* Styles for elements with specific classes */
+.elem {
+  width: 100%;
+  /* height: 50vh; */
+  padding: 1vw;
+  border-bottom: 1px solid #252422;
+}
+.bos {
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 2vw; */
+}
+.img {
+  height: 15vw;
+  width: 25vw;
+  background-color: red;
+  overflow: hidden;
+}
+.img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  scale: 1.1;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.contain {
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+/* Hover effect for .contain */
+.contain:hover {
+  background-color: rgba(218, 218, 218, 0.5);
+}
+.contain:hover img {
+  scale: 1;
+}
+/* Styles for headings and their hover effect */
+.icon h1 {
+  font-size: 3.2vw;
+  line-height: 2.8vw;
+  letter-spacing: -2px;
+}
+.contain:hover h1 {
+  text-decoration: underline;
+}
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 65%;
+  font-size: 3.2vw;
+}
+/* Shared styles for footer and its elements */
+#footer {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #252422;
+  padding: 5vw;
+  color: #f3f3f3;
+}
+footer .footer-top,
+footer .footer-bottom {
+  height: 45vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2vw;
+}
+/* Styles for top and bottom sections of the footer */
+.footer-top .footer-top-left,
+.footer-bottom .footer-bottom-left {
+  width: 50%;
+}
+.footer-top .footer-top-right,
+.footer-bottom .footer-bottom-right {
+  width: 50%;
+}
+.footer-top .footer-top-right p {
+  font-size: 3vw;
+  font-weight: 600;
+}
+.footer-top .footer-top-right p a {
+  color: #f3f3f3;
+}
+.footer-bottom-left h4 {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.8vw;
+}
+.footer-bottom-left input {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  font-size: 1.7vw;
+}
+.footer-bottom-left .flex {
+  border-bottom: 1px solid #f3f3f3;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer-bottom-right {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* Styles for items within the footer */
+.items h3 {
+  font-size: 1.8vw;
+  margin-bottom: 1vw;
+  text-transform: uppercase;
+  position: relative;
+  left: -10px;
+}
+.items h3::before {
+  content: '';
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  margin-right: 0.5vw;
+}
+.items h5 {
+  font-size: 1.4vw;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.items h5:hover {
+  text-decoration: underline;
+}
+
+#button::before {
+  content: '';
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+  border-radius: 100%;
+  scale: 1;
+}
+#button {
+  -webkit-transition: scale 0.3s linear;
+  -o-transition: scale 0.3s linear;
+  transition: scale 0.3s linear;
+  cursor: pointer;
+}
