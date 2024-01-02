@@ -123,6 +123,7 @@ body {
   width: 100%;
 }
 .page2-content {
+  margin-top: 35vw;
   height: 100%;
   padding: 15vw;
   width: 100%;
@@ -554,4 +555,201 @@ footer .footer-bottom {
   -o-transition: scale 0.3s linear;
   transition: scale 0.3s linear;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  #overlay {
+    height: 50vh;
+  }
+
+  /* MouseFollower Animation */
+  .mousefollower {
+    display: none;
+  }
+  #page1 nav {
+    gap: 56vw;
+  }
+  .nav h5 {
+    display: none;
+  }
+  #page1 nav .span {
+    display: none;
+  }
+  #page2 {
+    height: 90vh;
+    width: 100%;
+  }
+  .page2-content {
+    margin-top: 80vw;
+  }
+  .page2-wrapper {
+    flex-direction: column;
+  }
+  .page2-content figure {
+    padding: 5vw;
+    height: 25vh;
+  }
+  #page3 {
+    height: 70vh;
+    width: 100%;
+  }
+  .page3-content {
+    align-items: self-start;
+    flex-direction: column;
+    margin-top: 10vw;
+  }
+  .page3-line {
+    width: 90%;
+    margin-left: 5%;
+    height: 0.1rem;
+    background-color: currentColor;
+    margin-bottom: 5vw;
+  }
+  .page3-left-content {
+    margin-top: 8vw;
+    width: 80%;
+  }
+  .page3-left-content h4 {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+  .page3-content button {
+    font-weight: 600;
+    font-size: 5.2vw;
+    margin-bottom: 2vw;
+  }
+  #page4 {
+    width: 100%;
+    height: 50vh;
+  }
+  .page4-container {
+    flex-direction: column;
+    padding: 5vw;
+  }
+  .page4-container img,
+  .page4-container video {
+    width: 100%;
+    height: 100%;
+  }
+  .page4-text {
+    display: none;
+  }
+  .top-left,
+  .right-center {
+    display: none;
+  }
+  .bottom-right {
+    height: 80vh;
+  }
+  /* Shared styles for page5 and its elements */
+  #page5 {
+    margin-top: -30vw;
+  }
+  .page5-content {
+    flex-direction: column;
+  }
+  /* Styles for left and right sections */
+  .left,
+  .right {
+    width: 100%;
+  }
+  /* Styles for text content in the left section */
+  .left .text h1 {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+  .left p {
+    font-size: 5.5vw;
+    margin-top: 3vw;
+  }
+  .left button {
+    padding: 0.89vw 6.8vw;
+    text-transform: uppercase;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+    font-size: 5.3vw;
+  }
+  #page6 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 2vw 5vw;
+  }
+
+  /* Shared styles for buttons within .flex */
+  .flex button {
+    font-size: 3.3vw;
+  }
+
+  .img {
+    height: 55vw;
+    width: 55vw;
+    overflow: hidden;
+    margin-top: 2vw;
+  }
+
+  .img img {
+    scale: 1;
+  }
+  .icon h1 {
+    font-size: 5.2vw;
+    line-height: 5.8vw;
+    letter-spacing: -1px;
+  }
+
+  .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5vw 0;
+    font-size: 5.2vw;
+  }
+  footer .footer-top,
+  footer .footer-bottom {
+    height: 40vw;
+    flex-direction: column;
+  }
+  /* Styles for top and bottom sections of the footer */
+  .footer-top .footer-top-left,
+  .footer-bottom .footer-bottom-left,
+  .footer-top .footer-top-right,
+  .footer-bottom .footer-bottom-right {
+    width: 100%;
+  }
+  .footer-top .footer-top-right p {
+    font-size: 6vw;
+    font-weight: 600;
+    margin-bottom: 5vw;
+  }
+  .footer-bottom-left h4 {
+    font-size: 5.5vw;
+    margin-bottom: 3.8vw;
+  }
+  .footer-bottom-left input {
+    font-size: 5.7vw;
+  }
+  .footer-bottom-left .flex {
+    width: 100%;
+  }
+  .footer-bottom-right {
+    flex-direction: column;
+  }
+  /* Styles for items within the footer */
+  .items h3 {
+    font-size: 4.8vw;
+    margin-bottom: 3vw;
+    margin-top: 2vw;
+  }
+  .items h5 {
+    font-size: 3.4vw;
+    margin-bottom: 1vw;
+  }
 }
